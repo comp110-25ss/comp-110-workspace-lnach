@@ -5,6 +5,9 @@ __author__ = "730825624"
 
 def all(integers: list[int], integer: int) -> bool:
     """Checks if the integer given is the same as the integers in the list"""
+    # If the list is empty it immediately returns False
+    if len(integers) == 0:
+        return False
     # Loops through the list and if any of the integers do not equal the integer given
     # it returns False. Otherwise it returns True
     for element in integers:
@@ -15,7 +18,8 @@ def all(integers: list[int], integer: int) -> bool:
 
 
 def max(integers: list[int]) -> int:
-    """Returns the largest integer in a list. If the list is empty, it throws a ValueError"""
+    """Returns the largest integer in a list. If the list is empty, it throws a
+    ValueError"""
     if len(integers) == 0:
         raise ValueError("max() arg is an empty List")
     # Make the largest integer the first integer in case there are any negative
@@ -30,7 +34,8 @@ def max(integers: list[int]) -> int:
 
 
 def is_equal(list1: list[int], list2: list[int]) -> bool:
-    """Returns true if both lists are the same at every index and False if they are not"""
+    """Returns true if both lists are the same at every index and False if they are
+    not"""
     idx = 0
     # If the lengths of each list are different, it will return False
     if len(list1) != len(list2):
